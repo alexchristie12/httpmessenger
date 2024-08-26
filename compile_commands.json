@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/alex/Code/CC3501/practicals/prac06/httpmessenger/build",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -o CMakeFiles/httpmessenger.dir/src/main.cpp.o -c /home/alex/Code/CC3501/practicals/prac06/httpmessenger/src/main.cpp",
+  "file": "/home/alex/Code/CC3501/practicals/prac06/httpmessenger/src/main.cpp",
+  "output": "CMakeFiles/httpmessenger.dir/src/main.cpp.o"
+}
+]
