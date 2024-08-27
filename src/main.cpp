@@ -67,8 +67,6 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	// Extract the args
-	std::string user(argv[1]);
-	std::string msg(argv[2]);
 
 	// Initialise the HTTP library
 	CURL *curl = curl_easy_init();
@@ -83,10 +81,10 @@ int main(int argc, char *argv[])
 
 	// Create the url
 	// We can use length 0 to call strlen as we don't have '\0' characters
-	std::string url_string = make_url(base_url, user, msg);
-	std::string user_proper(curl_easy_escape(curl, user.c_str(), 0));
-	std::string msg_proper(curl_easy_escape(curl, msg.c_str(), 0));
-	std::string url = make_url(base_url, user_proper, msg_proper);
+	// std::string url_string = make_url(base_url, user, msg);
+	std::string user(curl_easy_escape(curl, argv[1], 0));
+	std::string msg(curl_easy_escape(curl, argv[2], 0));
+	std::string url = make_url(base_url, user, msg);
 	printf("Sending: %s", url.c_str());
 	// Configure the URL to load
 	// We need to construct the URL from the parts
